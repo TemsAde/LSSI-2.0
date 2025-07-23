@@ -6,91 +6,126 @@
     <title>Document</title>
     <link rel="stylesheet" href="./dist/output.css">
     <link rel="stylesheet" href="./ext-style.css">
-</head>
-<body class="flex md:flex-row flex-col p-6">
- <div class="mt-8">
-  <div class="relative mb-1">
-    <input type="checkbox" id="toggle1" class="toggle hidden" />
-    <label class="title block font-bold bg-white p-4 cursor-pointer" for="toggle1">
-       What services does your company offer?
-    </label>
-    <div class="content bg-white overflow-hidden">
-      <p class="p-4">We provide comprehensive logistics solutions, including: Cold chain logistics for temperature-sensitive goods, General commodity logistics for a wide range of products, Procurement and sourcing support, End-to-end logistics, covering everything from supplier coordination to final delivery</p>
-    </div>
-  </div>
-  <div class="relative mb-1">
-    <input type="checkbox" id="toggle2" class="toggle hidden" />
-    <label class="title block font-bold bg-white p-4 cursor-pointer" for="toggle2">
-       How do your procurement services work?
-    </label>
-    <div class="content bg-white overflow-hidden">
-        <p class="p-4"> Our team can source products on your behalf—from supplier identification and negotiation to quality control and logistics. Whether local or international, we help reduce your procurement burden and optimize costs.</p>
-    </div>
-  </div>
-  <div class="relative mb-1">
-    <input type="checkbox" id="toggle3" class="toggle hidden" />
-    <label class="title block font-bold bg-white p-4 cursor-pointer" for="toggle3">
-      How do you ensure temperature consistency during cold chain logistics?
-    </label>
-    <div class="content bg-white overflow-hidden">
-      <p class="p-4">We use insulated packaging, temperature-controlled vehicles, and GPS-enabled real-time monitoring to ensure your goods stay within the required temperature range throughout the journey.</p>
-    </div>
-  </div>
-  <div class="relative mb-1">
-    <input type="checkbox" id="toggle4" class="toggle hidden" />
-    <label class="title block font-bold bg-white p-4 cursor-pointer" for="toggle4">
-      What regions do you serve
-    </label>
-    <div class="content bg-white overflow-hidden">
-      <p class="p-4"> We operate nationwide and offer international shipping and procurement support. Contact us for details on service availability in your location</p>
-    </div>
-  </div>
- </div>
 
- <div class="mt-8">
-    <div class="relative mb-1">
-    <input type="checkbox" id="toggle5" class="toggle hidden" />
-    <label class="title block font-bold bg-white p-4 cursor-pointer" for="toggle5">
-      What is End-to-end logistics?
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+</head>
+<body>
+   
+     <!-- Book a Consultation Form -->
+
+     <div class="container m-auto bg-sky-950 p-8 max-w-lg rounded-xl">
+        <div class="text-white py-4">
+            <p class="text-xl font-semibold">Book a Consultation</p>
+            <p class="text-sm">So our team can reach out to you on time</p>
+        </div>
+
+        <form action="" class="flex justify-between" >
+           <div>
+             <div class="mb-5">
+               <label for="email" class="block mb-2 text-sm font-medium text-white">Full name</label>
+               <input type="text" id="full-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your Name" required />
+             </div>
+
+              <div class="mb-5">
+                <label for="email" class="block mb-2 text-sm font-medium text-white">Email</label>
+                <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required />
+              </div>
+
+              <div class="mb-5">
+                <label for="phone-number" class="block mb-2 text-sm font-medium text-white">Phone number</label>
+                <input type="tel" id="phone-number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="000-000-00" required />
+              </div>
+            </div>
+
+            <div>
+                <div class="text-white text-sm mb-2 font-medium">Available Date</div>
+                <div class="relative max-w-sm mb-5">
+                  <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                     <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                     </svg>
+                   </div>
+                   <input datepicker id="default-datepicker" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+                </div>
+
+                <div class="mb-5">
+                   <label for="message" class="block mb-2 text-sm font-medium text-white">Your message</label>
+                   <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+                </div>
+
+                <button class="bg-orange-500 rounded-lg hover:bg-sky-950 px-4 md:px-8 py-2 hover:border-2 hover:border-orange-500">
+                  <a class="text-white text-lg" href="./src/give2.html">Book Now</a>
+               </button>
+            </div>
+        </form>
+     </div>
+
+
+
+  <fieldset>
+  <legend class="text-md text-gray-950 px-2">Select Subject</legend>
+
+  <div class="flex space-x-2">
+
+  <div class="flex items-center mb-4">
+    <input id="country-option-1" type="radio" name="countries" value="USA" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600" checked>
+    <label for="country-option-1" class="block ms-2  text-sm font-medium text-gray-900 dark:text-gray-300">
+      General Inquiry
     </label>
-    <div class="content bg-white overflow-hidden">
-      <p class="p-4">End-to-end logistics means we handle every stage of your supply chain—from procurement and warehousing to transportation, delivery, and returns—ensuring a smooth and efficient process from start to finish.</p>
-    </div>
   </div>
-  <div class="relative mb-1">
-    <input type="checkbox" id="toggle6" class="toggle hidden" />
-    <label class="title block font-bold bg-white p-4 cursor-pointer" for="toggle6">
-      Title goes here
+
+  <div class="flex items-center mb-4">
+    <input id="country-option-2" type="radio" name="countries" value="Germany" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:focus:bg-blue-600 dark:bg-gray-700 dark:border-gray-600">
+    <label for="country-option-2" class="block ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+      Request a Quote
     </label>
-    <div class="content bg-white overflow-hidden">
-      <p class="p-4">We transport:
-         Perishable food and beverages,
-         Pharmaceuticals and medical supplies,
-         Consumer electronics,
-         Industrial and commercial goods,
-         Raw materials and packaged commodities.</p>
-    </div>
   </div>
-  <div class="relative mb-1">
-    <input type="checkbox" id="toggle7" class="toggle hidden" />
-    <label class="title block font-bold bg-white p-4 cursor-pointer" for="toggle7">
-      What safety measures are in place during handling and delivery?
+
+  <div class="flex items-center mb-4">
+    <input id="country-option-3" type="radio" name="countries" value="Spain" class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:bg-gray-700 dark:border-gray-600">
+    <label for="country-option-3" class="block ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+      Provide Feedback
     </label>
-    <div class="content bg-white overflow-hidden">
-      <p class="p-4">We adhere to strict handling protocols, including sanitization, secure packaging, trained personnel, and temperature monitoring. All operations meet industry and regulatory standards.
-      Would you like this content broken down for display in sections or converted into collapsible sections for a webpage? I can help structure it for your web layout.</p>
-    </div>
   </div>
-  <div class="relative mb-1">
-    <input type="checkbox" id="toggle8" class="toggle hidden" />
-    <label class="title block font-bold bg-white p-4 cursor-pointer" for="toggle8">
-      Do you offer same-day or express delivery?
-    </label>
-    <div class="content bg-white overflow-hidden">
-      <p class="p-4">Yes. Express and same-day delivery are available in select regions, depending on package type and destination.</p>
-    </div>
+
   </div>
- </div>
+
+</fieldset>
+
+
+
+
+
+<div class="flex space-x-2 items-center flex-wrap md:flex-nowrap">
+  <div class="w-16">
+    <img src="./assets/wbb 3.jpeg" class="w-full h-auto block" alt="">
+  </div>
+  <div class="w-16">
+    <img src="./assets/wbb 6.png" class="w-full h-auto block" alt="">
+  </div>
+  <div class="w-16">
+    <img src="./assets/wbb 8.png" class="w-full h-auto block" alt="">
+  </div>
+  <div class="w-16">
+    <img src="./assets/wbb logo 1.jpeg" class="w-full h-auto block" alt="">
+  </div>
+  <div class="w-16">
+    <img src="./assets/wbb logo 2.png" class="w-full h-auto block" alt="">
+  </div>
+  <div class="w-16">
+    <img src="./assets/wbb4.jpeg" class="w-full h-auto block" alt="">
+  </div>
+  <div class="w-16">
+    <img src="./assets/wbb 8.png" class="w-full h-auto block" alt="">
+  </div>
+  <div class="w-16">
+    <img src="./assets/wbb99.png" class="w-full h-auto block" alt="">
+  </div>
+</div>
+
+
+
 
 </body>
 </html>
