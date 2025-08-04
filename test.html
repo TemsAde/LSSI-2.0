@@ -80,6 +80,70 @@
   </div>
 </div>
 
+<div x-data="carousel()" x-init="start()" class="relative w-full max-w-3xl mx-auto overflow-hidden">
+    <!-- Slides -->
+    <template x-for="(slide, index) in slides" :key="index">
+        <div x-show="active === index" class="w-full transition-opacity duration-500" x-transition:enter="opacity-0" x-transition:enter-end="opacity-100">
+            <img :src="slide.image" alt="" class="w-full h-64 object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-green-950 bg-opacity-50 text-white text-center py-2">
+                <p x-text="slide.caption"></p>
+            </div>
+        </div>
+    </template>
+
+    <!-- Prev Button -->
+    <button @click="prev()" class="absolute left-2 top-1/2 -translate-y-1/2 bg-yellow-500 bg-opacity-50 text-white p-2 rounded-full">
+        <i class="fa-icon fa-arrow-left"></i>
+    </button>
+
+    <!-- Next Button -->
+    <button @click="next()" class="absolute right-2 top-1/2 -translate-y-1/2 bg-yellow-500 bg-opacity-50 text-white p-2 rounded-full">
+        &#8594;
+    </button>
+</div>
+
+<!-- Dots (Moved Outside Carousel) -->
+<div class="mt-4 flex justify-center space-x-2">
+    <template x-for="(slide, index) in slides" :key="index">
+        <button @click="goTo(index)" :class="{'bg-black': active === index, 'bg-gray-400': active !== index}" class="w-3 h-3 rounded-full"></button>
+    </template>
+</div>
+
+<script>
+    function carousel() {
+        return {
+            active: 0,
+            slides: [
+                { image: './assets/inside lssi (1).jpg', caption: 'Lagos state COVID-19 distribution team' },
+                { image: './assets/inside lssi (3).jpg', caption: 'Another cycle of family planning commodities distribution process- picking, sorting and branding' },
+                { image: './assets/inside lssi (4).jpeg', caption: 'Cold boxes filled with routine immunization vaccines being loaded' },
+                { image: './assets/inside lssi (6).jpg', caption: 'Spacious warehouse for rent for commodities storage' },
+                { image: './assets/inside lssi (7).jpg', caption: 'Another cycle of family planning commodities distribution process' },
+                { image: './assets/SERVICESW (1).jpg', caption: 'Rapid diagnostic test kits ready for distribution' },
+                { image: './assets/SERVICESW (2).jpg', caption: 'USAID/GHSC-PCM Antiretroviral ready for distribution (south-west)' },
+                { image: './assets/services e (1).jpg', caption: 'Inside LSSI' },
+                { image: './assets/services e (2).jpg', caption: 'Inside LSSI' },
+                { image: './assets/services e (3).jpg', caption: 'Inside LSSI' },
+            ],
+            start() {
+                setInterval(() => {
+                    this.next();
+                }, 4000);
+            },
+            next() {
+                this.active = (this.active + 1) % this.slides.length;
+            },
+            prev() {
+                this.active = (this.active - 1 + this.slides.length) % this.slides.length;
+            },
+            goTo(index) {
+                this.active = index;
+            }
+        }
+    }
+</script>
+
+
 
 </body>
 </html>
